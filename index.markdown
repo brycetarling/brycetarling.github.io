@@ -1,7 +1,14 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
+layout: default
+title: Home
 ---
-Testing the deploy pipeline.
+
+# [Placeholder: Headline]
+
+[Placeholder: Positioning statement — 1-2 sentences on who you are and what you do]
+
+## Featured Work
+
+[Placeholder: 3-4 curated highlights linking into portfolio]
+
+[Placeholder: CTA to resume/contact]

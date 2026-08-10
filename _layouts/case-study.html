@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<article class="case-study">
+  <header class="case-study__header">
+    <p class="case-study__category">{{ page.category }}</p>
+    <h1 class="case-study__title">{{ page.title }}</h1>
+  </header>
+
+  <section class="case-study__section">
+    <h2>Context &amp; Challenge</h2>
+    {{ content }}
+  </section>
+
+  {% if page.attribution == "public" and page.sample_link %}
+  <section class="case-study__section case-study__sample">
+    <h2>Sample</h2>
+    <a href="{{ page.sample_link }}" target="_blank" rel="noopener">View the published piece &rarr;</a>
+  </section>
+  {% endif %}
+
+  {% if page.skills %}
+  <section class="case-study__section case-study__skills">
+    <h2>Skills Demonstrated</h2>
+    <ul class="case-study__skills-list">
+      {% for skill in page.skills %}
+      <li>{{ skill }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+</article>
