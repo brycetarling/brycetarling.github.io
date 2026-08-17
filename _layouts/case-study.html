@@ -1,32 +1,96 @@
 ---
 layout: default
 ---
-<article class="case-study">
-  <header class="case-study__header">
-    <p class="case-study__category">{{ page.category }}</p>
-    <h1 class="case-study__title">{{ page.title }}</h1>
-  </header>
+<div class="breadcrumb wrap">
+  <a href="{{ '/portfolio/' | relative_url }}">Portfolio</a> / {{ page.category }}
+</div>
 
-  <section class="case-study__section">
-    <h2>Context &amp; Challenge</h2>
+<article class="wrap">
+  <div class="case-layout">
+    <div>
+      <p class="kicker">{{ page.category }}</p>
+      <h1 class="h-case">{{ page.title }}</h1>
+      {% if page.deck %}<p class="deck">{{ page.deck }}</p>{% endif %}
+
+      {% if page.cover_image %}
+      <figure class="case-lead {% if page.cover_orientation == 'portrait' %}is-portrait{% endif %}">
+        <img src="{{ page.cover_image | relative_url }}" alt="{{ page.cover_alt | default: page.title }}">
+        {% if page.cover_caption %}<figcaption>{{ page.cover_caption }}</figcaption>{% endif %}
+      </figure>
+      {% endif %}
+    </div>
+
+    <aside class="case-rail">
+      <div>
+        <span class="meta-label">Attribution</span>
+        {% if page.attribution == "public" %}
+        <span class="tag tag-public">Public — my byline</span>
+        {% else %}
+        <span class="tag tag-anon">Anonymized</span>
+        {% endif %}
+      </div>
+
+      {% if page.year %}
+      <div>
+        <span class="meta-label">Year</span>
+        <p>{{ page.year }}</p>
+      </div>
+      {% endif %}
+
+      {% if page.role %}
+      <div>
+        <span class="meta-label">Role</span>
+        <p>{{ page.role }}</p>
+      </div>
+      {% endif %}
+
+      {% if page.skills %}
+      <div>
+        <span class="meta-label">Skills</span>
+        <div class="skills">
+          {% for skill in page.skills %}<span>{{ skill }}</span>{% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+      {% if page.published_in %}
+      <div>
+        <span class="meta-label">Published</span>
+        <p>{{ page.published_in }}</p>
+      </div>
+      {% endif %}
+    </aside>
+  </div>
+
+  <div class="prose">
     {{ content }}
-  </section>
+  </div>
 
-  {% if page.attribution == "public" and page.sample_link %}
-  <section class="case-study__section case-study__sample">
-    <h2>Sample</h2>
-    <a href="{{ page.sample_link }}" target="_blank" rel="noopener">View the published piece &rarr;</a>
-  </section>
+  {% if page.attribution != "public" %}
+  <div class="anon-note">
+    <p>Client, author, and publication withheld by agreement. Process and role are described in full below; samples available on request.</p>
+  </div>
   {% endif %}
 
-  {% if page.skills %}
-  <section class="case-study__section case-study__skills">
-    <h2>Skills Demonstrated</h2>
-    <ul class="case-study__skills-list">
-      {% for skill in page.skills %}
-      <li>{{ skill }}</li>
-      {% endfor %}
-    </ul>
-  </section>
+  {% if page.attribution == "public" and page.sample_url %}
+  <div class="rule" style="margin-bottom: 20px;"></div>
+  <p class="meta-label" style="margin-bottom: 10px;">Sample</p>
+  <a href="{{ page.sample_url }}" class="btn btn-secondary" target="_blank" rel="noopener">View the published piece →</a>
   {% endif %}
+
+  <div class="case-pager">
+    {% if page.previous %}
+    <a href="{{ page.previous.url | relative_url }}">
+      <span class="meta-label">← Previous</span>
+      <span>{{ page.previous.title }}</span>
+    </a>
+    {% else %}<span></span>{% endif %}
+
+    {% if page.next %}
+    <a href="{{ page.next.url | relative_url }}">
+      <span class="meta-label">Next →</span>
+      <span>{{ page.next.title }}</span>
+    </a>
+    {% endif %}
+  </div>
 </article>

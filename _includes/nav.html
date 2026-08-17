@@ -1,8 +1,16 @@
-<nav class="site-nav">
-  <a href="{{ '/' | relative_url }}" class="site-nav__brand">Bryce Tarling</a>
-  <ul class="site-nav__links">
-    <li><a href="{{ '/portfolio/' | relative_url }}">Portfolio</a></li>
-    <li><a href="{{ '/about/' | relative_url }}">About</a></li>
-    <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
-  </ul>
-</nav>
+<header class="site-header">
+  <a href="{{ '/' | relative_url }}" class="brand">
+    <img src="{{ '/assets/img/wordmark.svg' | relative_url }}" alt="Bryce Tarling">
+  </a>
+
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav class="site-nav">
+    <a href="{{ '/portfolio/' | relative_url }}" {% if page.url contains '/portfolio/' %}aria-current="page"{% endif %}>Portfolio</a>
+    <a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}aria-current="page"{% endif %}>About</a>
+    <a href="{{ '/contact/' | relative_url }}" {% if page.url == '/contact/' %}aria-current="page"{% endif %}>Contact</a>
+  </nav>
+</header>
