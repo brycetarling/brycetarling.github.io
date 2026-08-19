@@ -6,6 +6,7 @@ list_summary: "Designed for lead-gen, this asset gives law firms a list of steps
 category: downloadable-content
 order: 2
 cover_image: true
+cover_ext: "webp"
 image_alt: "Cover of the Mastering the Client Intake Checklist"
 attribution: "Clio"
 year: 2024

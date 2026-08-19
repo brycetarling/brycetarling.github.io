@@ -6,6 +6,7 @@ list_summary: "Joe Runkle shares how Google's Local Services Ads and Clio helped
 category: customer-stories
 order: 2
 cover_image: true
+cover_ext: "png"
 image_alt: "Portrait of Joe Runkle on a Clio background"
 attribution: "Clio"
 year: 2025

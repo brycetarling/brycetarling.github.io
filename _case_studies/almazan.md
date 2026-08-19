@@ -5,7 +5,9 @@ meta_description: "Alex Almazan demonstrates the ideal AI use case for a mid-siz
 list_summary: "Alex Almazan demonstrates the ideal AI use case for a mid-sized law firm, helping him close more deals while focusing on what's most important in his practice."
 category: customer-stories
 order: 1
+featured: true
 cover_image: true
+cover_ext: "webp"
 image_alt: "Portrait of Alex Almazan on a Clio background"
 attribution: "Clio"
 year: 2026

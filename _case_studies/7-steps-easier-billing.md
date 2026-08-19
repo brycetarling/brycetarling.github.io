@@ -6,6 +6,7 @@ list_summary: "This mid-funnel asset gives prospects an overview of how legal bi
 category: downloadable-content
 order: 1
 cover_image: true
+cover_ext: "webp"
 image_alt: "Cover of the 7 Steps to Easier, More Efficient Law Firm Billing guide"
 attribution: "Clio"
 year: 2022

@@ -6,6 +6,7 @@ list_summary: "In a regulated industry like law, lawyers need to know the risks 
 category: blog-post
 order: 2
 cover_image: true
+cover_ext: "webp"
 image_alt: "A computer chip is immersed in darkness"
 attribution: "Bryce Tarling"
 year: 2026

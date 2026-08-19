@@ -6,6 +6,7 @@ list_summary: "For lawyers using AI to get more done in a day, billing by the ho
 category: blog-post
 order: 3
 cover_image: true
+cover_ext: "webp"
 image_alt: "A tombstone reads \"the billable hour\" with a flower laid on top"
 attribution: "Bryce Tarling"
 year: 2026

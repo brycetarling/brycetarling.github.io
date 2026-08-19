@@ -5,7 +5,9 @@ meta_description: "As legal clients turn more to consumer AI solutions, law firm
 list_summary: "As legal clients turn more to consumer AI solutions, law firms must reinforce their expertise and adapt their services."
 category: blog-post
 order: 1
+featured: true
 cover_image: true
+cover_ext: "webp"
 image_alt: "Documents showing client signature"
 attribution: "Bryce Tarling"
 year: 2026

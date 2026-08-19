@@ -6,6 +6,7 @@ list_summary: "An online resource comparing hourly rates across states and pract
 category: research-and-reporting
 order: 3
 cover_image: true
+cover_ext: "png"
 image_alt: "Chart shows the steadily increasing hourly rates for lawyers and their law firms since 2016"
 attribution: "Clio"
 year: 2026

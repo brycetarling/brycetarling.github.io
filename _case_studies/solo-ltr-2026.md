@@ -6,6 +6,7 @@ list_summary: "Written for an audience of small law firms, this report gives ins
 category: research-and-reporting
 order: 2
 cover_image: true
+cover_ext: "webp"
 image_alt: "Cover of the 2026 Legal Trends for Solo and Small Law Firms report"
 attribution: "Clio"
 year: 2026

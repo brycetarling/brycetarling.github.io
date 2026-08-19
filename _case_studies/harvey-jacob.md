@@ -6,6 +6,7 @@ list_summary: "Danelle Harvey-Jacob, Esq. describes the technology stack she dev
 category: customer-stories
 order: 3
 cover_image: true
+cover_ext: "png"
 image_alt: "Portrait of Danelle Harvey-Jacob, Esq on a Clio background"
 attribution: "Clio"
 year: 2025
