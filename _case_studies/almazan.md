@@ -6,6 +6,7 @@ list_summary: "Alex Almazan demonstrates the ideal AI use case for a mid-sized l
 category: customer-stories
 order: 1
 featured: true
+featured_order: 3
 cover_image: true
 cover_ext: "webp"
 image_alt: "Portrait of Alex Almazan on a Clio background"

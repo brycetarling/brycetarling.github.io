@@ -6,6 +6,7 @@ list_summary: "As legal clients turn more to consumer AI solutions, law firms mu
 category: blog-post
 order: 1
 featured: true
+featured_order: 1
 cover_image: true
 cover_ext: "webp"
 image_alt: "Documents showing client signature"

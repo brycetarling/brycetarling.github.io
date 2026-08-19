@@ -19,7 +19,7 @@ role_line: "Writer • Editor • Content Strategy"
   <a href="{{ '/portfolio/' | relative_url }}" style="font: 500 11px/1 var(--font-ui); letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-4); text-decoration:none;">All work →</a>
 </div>
 
-{% assign featured = site.case_studies | where: "featured", true %}
+{% assign featured = site.case_studies | where: "featured", true | sort: "featured_order" %}
 {% for item in featured %}
 {% assign path_parts = item.path | split: '/' %}
 {% assign slug = path_parts | last | remove: '.md' %}
