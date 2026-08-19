@@ -26,7 +26,7 @@ role_line: "Writer • Editor • Content Strategy"
 <a href="{{ item.url | relative_url }}" class="work-item">
   <div class="work-thumb">
     {% if item.cover_image %}
-    <img src="{{ '/assets/images/case-studies/' | append: slug | append: '-cover.' | append: item.cover_ext | relative_url }}" alt="{{ item.image_alt | default: item.title }}">
+    <img src="{{ '/assets/images/case-studies/' | append: slug | append: '-cover.' | append: item.cover_ext | relative_url }}" alt="{{ item.image_alt | default: item.title | escape }}">
     {% else %}
     <div class="no-cover">no cover{% if item.category == 'ghostwriting' %}<br>anon.{% endif %}</div>
     {% endif %}

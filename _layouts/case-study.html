@@ -19,7 +19,7 @@ layout: default
 
       {% if page.cover_image %}
       <figure class="case-lead {% if page.cover_orientation == 'portrait' %}is-portrait{% endif %}">
-        <img src="{{ '/assets/images/case-studies/' | append: slug | append: '-cover.' | append: page.cover_ext | relative_url }}" alt="{{ page.image_alt | default: page.title }}">
+        <img src="{{ '/assets/images/case-studies/' | append: slug | append: '-cover.' | append: page.cover_ext | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}">
         {% if page.cover_caption %}<figcaption>{{ page.cover_caption }}</figcaption>{% endif %}
       </figure>
       {% endif %}
