@@ -1,3 +1,22 @@
+#!/usr/bin/env bash
+# Run from the ROOT of your brycetarling.github.io repo:
+#   bash fix-case-study-page.sh
+#
+# Fixes on case study pages:
+#  - Removes the duplicate category label (was showing in both the
+#    breadcrumb AND as a kicker above the H1)
+#  - Adds top spacing so the H1/sidebar aren't flush against the breadcrumb
+#  - Removes the horizontal rule + "Sample" label above the CTA button
+#    (the anon-note box and meta-label already did that job; this was
+#    double-signposting)
+#  - Adds space below the CTA button before the prev/next pager
+#  - Adds the same sample link to the sidebar as a small text link
+
+set -e
+echo "Applying case study page fixes..."
+
+mkdir -p _layouts
+cat > _layouts/case-study.html << 'EOF'
 ---
 layout: default
 ---
@@ -96,3 +115,23 @@ layout: default
     {% endif %}
   </div>
 </article>
+EOF
+echo "  ✓ _layouts/case-study.html"
+
+# Add top spacing to case-layout in main.css (idempotent)
+f="assets/css/main.css"
+if [ -f "$f" ] && ! grep -q '.case-layout { display: grid; grid-template-columns: 1fr var(--rail); gap: 56px; align-items: start; margin-top: 44px; }' "$f"; then
+  if grep -q '.case-layout { display: grid; grid-template-columns: 1fr var(--rail); gap: 56px; align-items: start; }' "$f"; then
+    sed -i.bak 's/\.case-layout { display: grid; grid-template-columns: 1fr var(--rail); gap: 56px; align-items: start; }/.case-layout { display: grid; grid-template-columns: 1fr var(--rail); gap: 56px; align-items: start; margin-top: 44px; }/' "$f"
+    rm -f "${f}.bak"
+    echo "  ✓ assets/css/main.css (added top spacing)"
+  else
+    echo "  ! could not find expected .case-layout rule in main.css — check manually"
+  fi
+else
+  echo "  · assets/css/main.css already has the spacing fix, skipped"
+fi
+
+echo
+echo "Done. Review with: git diff"
+echo "Then: git add . && git commit -m \"Clean up case study page: remove duplicate category label, tighten spacing, add sidebar sample link\" && git push"
