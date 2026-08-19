@@ -16,3 +16,7 @@ defaults:
       layout: "case-study"
 
 markdown: kramdown
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
