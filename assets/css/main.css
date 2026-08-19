@@ -284,7 +284,7 @@ button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
     padding: 18px 0; border-top: 2px solid var(--rule); border-bottom: 2px solid var(--rule);
   }
 
-  .about-layout .portrait { order: -1; max-width: 320px; }
+  .about-layout .about-rail { order: -1; max-width: 320px; }
 
   .work-item { flex-direction: column; gap: 0; }
   .work-thumb { width: 100%; margin-bottom: 12px; }

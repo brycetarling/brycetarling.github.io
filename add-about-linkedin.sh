@@ -1,3 +1,24 @@
+#!/usr/bin/env bash
+# Run from the ROOT of your brycetarling.github.io repo:
+#   bash add-about-linkedin.sh
+#
+# Adds a LinkedIn link to the About page sidebar, formatted vertically
+# (label above link) matching the case study sidebar style, stacked
+# below the portrait photo.
+
+set -e
+echo "Adding LinkedIn link to About sidebar..."
+
+f="about/index.markdown"
+if [ ! -f "$f" ]; then
+  echo "ERROR: $f not found — run this from the repo root."
+  exit 1
+fi
+
+if grep -q "about-rail" "$f"; then
+  echo "  · already added, skipped"
+else
+  cat > "$f" << 'PAGE_EOF'
 ---
 layout: default
 title: "About"
@@ -48,3 +69,21 @@ meta_description: "Senior writer, editor, and content marketer with 10+ years of
     </div>
   </div>
 </div>
+PAGE_EOF
+  echo "  ✓ about/index.markdown"
+fi
+
+f="assets/css/main.css"
+if [ -f "$f" ] && grep -q '.about-layout .portrait { order: -1; max-width: 320px; }' "$f"; then
+  sed -i.bak 's/\.about-layout \.portrait { order: -1; max-width: 320px; }/.about-layout .about-rail { order: -1; max-width: 320px; }/' "$f"
+  rm -f "${f}.bak"
+  echo "  ✓ assets/css/main.css (updated mobile ordering to target new wrapper)"
+elif [ -f "$f" ] && grep -q '.about-layout .about-rail' "$f"; then
+  echo "  · main.css already updated, skipped"
+else
+  echo "  ! could not find expected mobile ordering rule in main.css — check manually"
+fi
+
+echo
+echo "Done. Review with: git diff"
+echo "Then: git add . && git commit -m \"Add LinkedIn link to About sidebar\" && git push"
