@@ -1,3 +1,22 @@
+#!/usr/bin/env bash
+# Run from the ROOT of your brycetarling.github.io repo:
+#   bash fix-home-page.sh
+#
+# Fixes two things:
+#  1. The stray "</a>" text showing under each Home page card. Jekyll's
+#     markdown processor (kramdown) treats <a> as an inline element, so
+#     wrapping a <div> inside it (like the work-thumb) confuses the parser.
+#     Portfolio never had this bug because it wraps each card in a <div>
+#     instead — this switches Home to that same, already-working pattern.
+#  2. Sets the Home page's featured picks to exactly: clients-using-ai,
+#     ltr-2025 (2025 Legal Trends Report), and almazan — removes the
+#     featured flag from ghostwriting.md.
+
+set -e
+echo "Applying home page fixes..."
+
+# 1. Rewrite index.markdown with the div-based work-item pattern
+cat > index.markdown << 'EOF'
 ---
 layout: default
 title: "Home"
@@ -38,3 +57,22 @@ role_line: "Writer • Editor • Content Strategy"
   </div>
 </div>
 {% endfor %}
+EOF
+echo "  ✓ index.markdown (div-wrapper fix for the stray </a> bug)"
+
+# 2. Remove featured flag from ghostwriting.md
+f="_case_studies/ghostwriting.md"
+if [ -f "$f" ] && grep -q "^featured: true$" "$f"; then
+  tmp="${f}.tmp.$$"
+  grep -v "^featured: true$" "$f" > "$tmp"
+  mv "$tmp" "$f"
+  echo "  ✓ removed featured flag from ghostwriting.md"
+else
+  echo "  · ghostwriting.md already has no featured flag, skipped"
+fi
+
+echo
+echo "Home page will now feature exactly: clients-using-ai, ltr-2025, almazan"
+echo
+echo "Done. Review with: git diff"
+echo "Then: git add . && git commit -m \"Fix stray </a> bug on home page, set featured picks to 3\" && git push"

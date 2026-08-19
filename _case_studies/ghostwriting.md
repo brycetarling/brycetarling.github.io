@@ -5,7 +5,6 @@ meta_description: "Working with executive leaders, I help develop blog posts, co
 list_summary: "Working with executive leaders, I help develop blog posts, contributed articles, presentations, and scripts."
 category: ghostwriting
 order: 1
-featured: true
 cover_image: false
 attribution: "Executive stakeholders"
 year: "Ongoing"
