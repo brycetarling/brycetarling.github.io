@@ -28,7 +28,18 @@ role_line: "Writer • Editor • Content Strategy"
     {% if item.cover_image %}
     <img src="{{ '/assets/images/case-studies/' | append: slug | append: '-cover.' | append: item.cover_ext | relative_url }}" alt="{{ item.image_alt | default: item.title | escape }}">
     {% else %}
-    <div class="no-cover">no cover{% if item.category == 'ghostwriting' %}<br>anon.{% endif %}</div>
+    {% if item.category == 'ghostwriting' %}
+    <div class="no-cover no-cover-icon">
+      <svg viewBox="0 0 24 28" aria-hidden="true">
+        <path d="M12 2 L17 12 L13.2 17 L13.2 19.5 L10.8 19.5 L10.8 17 L7 12 Z" fill="var(--paper)"/>
+        <rect x="10" y="19.5" width="4" height="6" fill="var(--paper)"/>
+        <line x1="12" y1="5" x2="12" y2="17" stroke="var(--ink)" stroke-width="1.1"/>
+        <circle cx="12" cy="12.5" r="1.3" fill="var(--ink)"/>
+      </svg>
+    </div>
+    {% else %}
+    <div class="no-cover">no cover</div>
+    {% endif %}
     {% endif %}
   </div>
   <div>
