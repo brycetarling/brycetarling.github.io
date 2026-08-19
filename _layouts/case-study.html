@@ -70,9 +70,6 @@ layout: default
   </div>
 
   {% if sample == '/contact/' %}
-  <div class="anon-note">
-    <p>Client, author, and publication withheld by agreement. Process and role are described in full above; samples available on request.</p>
-  </div>
   <a href="{{ sample | relative_url }}" class="btn btn-secondary" style="margin-bottom: 32px;">Get in touch →</a>
   {% elsif sample contains '/assets/' %}
   <a href="{{ sample | relative_url }}" class="btn btn-secondary" target="_blank" rel="noopener" style="margin-bottom: 32px;">Download the sample →</a>
