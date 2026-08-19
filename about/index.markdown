@@ -1,46 +1,31 @@
 ---
-layout: default
-title: About
-permalink: /about/
+title: "About"
+page_title: "Bryce Tarling | About"
+meta_description: "Senior writer, editor, and content marketer with 10+ years of experience working in B2B SaaS."
 ---
-<div class="about-layout">
-  <div>
-    <p class="kicker">About</p>
-    <h1 class="h-page">[Placeholder: About headline]</h1>
 
-    <div class="prose">
-      <p>[Placeholder: Bio paragraph one — Bryce's voice, not drafted here]</p>
-      <p>[Placeholder: Bio paragraph two]</p>
-      <p>[Placeholder: Bio paragraph three]</p>
-    </div>
+# A bit about me
 
-    <hr class="rule" style="margin:36px 0;">
+I'm a senior writer, editor, and content marketer with 10+ years of experience working in B2B SaaS.
 
-    <h2 class="h-sect" style="margin-bottom:20px;">Experience</h2>
-    <div class="cv">
-      <span class="year">[Placeholder: years]</span>
-      <span><strong>[Placeholder: Title]</strong> · [Placeholder: Company]</span>
-    </div>
+Skilled at creating compelling, audience-driven editorial content for online, print, and multimedia publications, I'm equally at home developing editorial strategy and executing polished drafts across a broad range of formats, audiences, and channels.
 
-    <hr class="rule" style="margin:36px 0;">
+People look to me for a calm and confident voice in executing clear and engaging communications for a variety of audiences and goals.
 
-    <h2 class="h-sect" style="margin-bottom:20px;">Recognition</h2>
-    <div class="cv">
-      <span class="year">[Placeholder: year]</span>
-      <span><strong>[Placeholder: Award]</strong> · [Placeholder: what it recognized]</span>
-    </div>
-  </div>
+## Experience
 
-  <div>
-    <figure class="portrait">
-      <img src="{{ '/assets/img/portrait.jpg' | relative_url }}" alt="Bryce Tarling">
-      <figcaption>Bryce Tarling</figcaption>
-    </figure>
+- **2016–2026** — Content marketer, Clio
+- **2014–2016** — Technical marketing writer, Reliance Foundry
+- **2012–2014** — Communications + Managing editor, Canadian Fair Trade Network / Fair Trade Magazine
+- **2013–2014** — Contract editor, Engineers Without Borders Canada
+- **2012–2013** — Editorial assistant, Alive Magazine
 
-    <p class="meta-label" style="margin-top:20px; border-left:2px solid var(--rule); padding-left:12px;">Based in<br><span style="font-family:var(--font-ui); font-size:14.5px; color:var(--ink); text-transform:none; letter-spacing:normal;">Surrey, BC</span></p>
+## Recognition
 
-    <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary" style="margin-top:20px;">Get in Touch →</a>
+- **2020** — B2B Killer Content Award, B2B Marketing Exchange
 
-    <p style="margin-top:24px;">[Placeholder: Resume download link]</p>
-  </div>
-</div>
+## Education
+
+- Diploma, Professional Writing, Douglas College
+- B.Ed., Secondary English Education, University of British Columbia
+- B.A., English, Sociology, University of British Columbia

@@ -1,23 +1,14 @@
 ---
-layout: default
-title: Contact
-permalink: /contact/
+title: "Contact"
+page_title: "Bryce Tarling | Contact"
+meta_description: "Contact and profile information for Bryce Tarling."
+contact_email: "givebrycewords@gmail.com"
 ---
-<p class="kicker">Contact</p>
-<h1 class="h-page">[Placeholder: Contact heading]</h1>
-<p class="page-intro">[Placeholder: Short paragraph — what you're open to, and what to include so Bryce can reply usefully]</p>
 
-<div class="contact-list">
-  <div class="contact-row">
-    <span class="meta-label">Email</span>
-    <a href="#">[Placeholder: obfuscated email — pending decision]</a>
-  </div>
-  <div class="contact-row">
-    <span class="meta-label">LinkedIn</span>
-    <a href="https://www.linkedin.com/in/bryce-tarling/" target="_blank" rel="noopener">/in/bryce-tarling</a>
-  </div>
-  <div class="contact-row">
-    <span class="meta-label">Résumé</span>
-    <a href="#">[Placeholder: Download PDF]</a>
-  </div>
-</div>
+# Reach out
+
+Whether you're working through a list of copy deliverables, want to explore a project, or just want to connect, feel free to reach out.
+
+[Connect on LinkedIn](https://www.linkedin.com/in/bryce-tarling)
+
+<!-- Email renders via the JS-obfuscated mailto link (see Contact page implementation thread) using the contact_email front matter field above — not as plain text, to avoid scraper exposure. -->
