@@ -1,25 +1,15 @@
 ---
 permalink: /404.html
 layout: default
+title: "Page not found"
+page_title: "Page not found | Bryce Tarling"
+meta_description: "The page you're looking for doesn't exist."
 ---
+<p class="kicker">404</p>
+<h1 class="h-page">Page not found</h1>
+<p class="page-intro" style="margin-bottom:40px;">The page you're looking for doesn't exist or may have moved.</p>
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
-
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+<div style="display:flex; gap:16px;">
+  <a href="{{ '/' | relative_url }}" class="btn btn-primary">Back to home →</a>
+  <a href="{{ '/portfolio/' | relative_url }}" class="btn btn-secondary">View portfolio</a>
 </div>
